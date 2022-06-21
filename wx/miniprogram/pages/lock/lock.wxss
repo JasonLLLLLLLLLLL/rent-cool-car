@@ -1,0 +1,6 @@
+/* pages/lock/lock.wxss */
+.beautiful {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

@@ -1,0 +1,20 @@
+<map
+ id="map"
+ latitude="{{location.latitude}}"
+ longitude="{{location.longitude}}"
+ scale="{{scale}}"
+ setting="{{setting}}"
+ enable-overlooking="{{isOverLooking}}"
+ enable-3D="{{is3D}}"
+ markers="{{markers}}" 
+>
+  <cover-view class="icon-container">
+    <cover-image  src="{{avatarURL?avatarURL:'../resources/account.png'}}" bindtap="onMyTripsTap"></cover-image>
+    <cover-image src="../resources/my_location.png" bindtap="onMyLocationTap"></cover-image>
+  </cover-view>
+
+  <cover-view bindtap="onScanTap" class="btn-container bg-grey round">
+  <!-- 给文字套个壳，让样式稳定生效 -->
+    <cover-view>扫码租车</cover-view>
+  </cover-view>
+</map>

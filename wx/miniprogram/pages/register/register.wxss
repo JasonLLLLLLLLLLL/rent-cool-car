@@ -1,0 +1,45 @@
+/* pages/register/register.wxss */
+.lic-tmpl {
+  width: 600rpx;
+  height: 450rpx;
+  /* 只让一层子集流动？ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  padding: 60rpx 0;
+}
+/* 给父级一个宽高，让子集撑满 */
+.lic-tmpl-img {
+  /* 会让他本身不占位置 */
+  position: absolute;
+  width: 600rpx;
+  height: 450rpx;
+  opacity: .7;
+  z-index: -1;
+}
+.strech {
+  width: 500rpx;
+  height: 300rpx;
+}
+.instruction {
+  position: absolute;
+  bottom: 450rpx;
+  font-size: 35rpx;
+}
+
+.cuIcon-camerafill{
+  font-size: 170rpx;
+  opacity: .5;
+}
+.lic-form {
+  width: 600rpx;
+}
+
+.cu-form-group .title {
+  /* ??? */
+  /* 最小宽度是4em+30rpx */
+  min-width: calc(4em + 30rpx);
+}
