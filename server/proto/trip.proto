@@ -1,0 +1,63 @@
+syntax = "proto3";
+// rpc的时间用这个package
+package coolcar;
+
+
+
+
+// 有点:自带的可选性
+
+
+
+
+
+// 引用的时候会用得到
+// import trippb "coolcar/proto/gen/go"
+// 这个用在go语言的引用世界
+option go_package="coolcar/proto/gen/go;trippb";
+
+message Location {
+    double latitude = 1;
+    double longitude = 2;
+}
+
+
+enum TripStatus {
+    TS_NOT_SPECIFIED = 0;
+    NOT_STARTED = 1;
+    IN_PROGRESS =2;
+    FINISHED = 3;
+    PAID = 4;
+}
+
+// 定义数据结构
+// 这样跟go里面写type有啥区别， 自动生成type？
+message Trip {
+    // 第一个字段是start, 第二个字段是end
+    string start = 1;
+    string end = 2;
+    int32 duration_sec = 3;
+    int32 fee_cent = 4;
+    Location start_pos = 5;
+    Location end_pos = 6;
+    // repeated ? []
+    repeated Location path_pos = 7;
+    TripStatus status = 8;
+}
+
+
+message GetTripRequest {
+    string id=1;
+}
+
+message GetTripResponse {
+    string id=1;
+    Trip trip = 2;
+
+}
+// 为了通信要一个service
+// 写了一个service，客户端和服务器端都生成好了
+service TripService {
+    // 给个trip_id作为参数，返回这个id对应的trip
+    rpc GetTrip (GetTripRequest) returns (GetTripResponse);
+}

@@ -1,3 +1,6 @@
+.nav .width75{
+  width: 75% !important;
+}
 swiper {
   width: 750rpx;
   height: 306rpx;

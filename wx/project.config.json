@@ -1,17 +1,16 @@
 {
-  "description": "项目配置文件，详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+  "appid": "wx93860c79cba8bab0",
+  "projectname": "wx",
+  "compileType": "miniprogram",
+  "libVersion": "2.24.5",
+  "miniprogramRoot": "miniprogram/",
+  "srcMiniprogramRoot": "miniprogram/",
   "packOptions": {
     "ignore": [],
     "include": []
   },
-  "miniprogramRoot": "miniprogram/",
-  "compileType": "miniprogram",
-  "projectname": "ts-demo",
   "setting": {
-    "useCompilerPlugins": [
-      "typescript"
-    ],
-    "urlCheck": true,
+    "urlCheck": false,
     "coverView": true,
     "es6": true,
     "postcss": true,
@@ -26,25 +25,77 @@
     "packNpmManually": false,
     "packNpmRelationList": [],
     "minifyWXSS": true,
+    "minifyWXML": true,
     "useStaticServer": true,
     "showES6CompileOption": false,
     "checkInvalidKey": true,
+    "compileHotReLoad": true,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
       "outputPath": ""
     },
     "disableUseStrict": false,
-    "minifyWXML": true
+    "useCompilerPlugins": [
+      "typescript"
+    ]
   },
-  "simulatorType": "wechat",
-  "simulatorPluginLibVersion": {},
-  "condition": {},
-  "srcMiniprogramRoot": "miniprogram/",
-  "appid": "wx93860c79cba8bab0",
-  "libVersion": "2.24.5",
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "",
+          "pathName": "pages/index/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/register/register",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/lock/lock",
+          "query": "car_id=6373",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/index/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/driving/driving",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/mytrips/mytrips",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
+  },
   "editorSetting": {
     "tabIndent": "insertSpaces",
     "tabSize": 2
+  },
+  "description": "项目配置文件，详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+  "scripts": {
+    "beforeCompile": "npm run",
+    "beforePreview": "npm run",
+    "beforeUpload": "npm run"
   }
 }
