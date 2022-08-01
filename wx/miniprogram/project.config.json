@@ -13,6 +13,7 @@
     ],
     "urlCheck": true,
     "coverView": true,
+    "nodeModules": true,
     "es6": true,
     "postcss": true,
     "lazyloadPlaceholderEnable": false,
@@ -46,5 +47,10 @@
   "editorSetting": {
     "tabIndent": "insertSpaces",
     "tabSize": 2
+  },
+  "scripts": {
+    "beforeCompile": "npm run tsc",
+    "beforePreview": "npm run tsc",
+    "beforeUpload": "npm run tsc"
   }
 }
